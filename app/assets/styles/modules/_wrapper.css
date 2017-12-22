@@ -1,0 +1,30 @@
+/*This style sheet creates padding
+of all containers that have text*/
+
+.wrapper {
+	padding-left: 18px;
+	padding-right: 18px;
+	max-width: 1236px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+
+	&--medium {
+		max-width: 976px;
+	}
+	/*Any .wrapper class nested inside of .wrapper
+	will have its padding reduced to zero*/
+	.wrapper {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	&--b-margin {
+
+		margin-bottom: 1rem;
+
+		@mixin atSmall {
+			margin-bottom: 3.875rem;
+		}
+	}
+}
